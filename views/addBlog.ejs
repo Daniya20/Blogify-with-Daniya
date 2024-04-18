@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include(`./partials/head`) %>
+    <title>Add Blog</title>
+</head>
+<body>
+    <%- include(`./partials/scripts`) %>    
+    <%- include(`./partials/navbar`) %>
+    <div class="container mt-3">
+        <form action="/blogs" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="title" class="form-control" id="title" name="title" aria-describedby="title">
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Write your magic here" id="body" name="body"></textarea>
+                <label for="body">Write your magic here</label>
+            </div>
+            <div class="mb-3">
+                <label for="coverImage" class="form-label">Cover Image</label>
+                <input type="file" class="form-control" id="coverImage" name="coverImage" aria-describedby="coverImage">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary">POST</button>
+            </div>
+
+        </form>
+    </div>
+
+
+
+    
+</body>
+</html>
